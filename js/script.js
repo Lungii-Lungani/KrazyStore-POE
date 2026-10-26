@@ -361,3 +361,60 @@ faqQuestions.forEach(function (question) {
     });
 
 });
+
+
+ 
+// ==========================================
+// CONTACT FORM VALIDATION AND EMAIL
+// ==========================================
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Get the contact form fields
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const messageType = document.getElementById("messageType").value;
+        const message = document.getElementById("message").value.trim();
+
+        // Check that all required information is provided
+        if (!name || !email || !messageType || !message) {
+            alert("Please complete all fields before sending your message.");
+            return;
+        }
+
+        // Validate the email address
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            document.getElementById("email").focus();
+            return;
+        }
+
+        // Prepare the email details
+        const recipient = "info@krazycare.co.za";
+        const subject = `KrazyCare Contact: ${messageType}`;
+
+        const emailBody =
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Message Type: ${messageType}\n\n` +
+            `Message:\n${message}`;
+
+        // Open the visitor's default email application
+        const mailtoLink =
+            `mailto:${recipient}` +
+            `?subject=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(emailBody)}`;
+
+        window.location.href = mailtoLink;
+
+    });
+
+}

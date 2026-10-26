@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +15,23 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
     <!-- Leaflet map styles -->
     <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
 </head>
 
 <body>
 
     <!-- Website Header -->
     <header>
-        <div class="container">
+        <div class="header-container">
+
             <h1>KrazyCare Drug Store</h1>
 
             <nav>
@@ -36,16 +42,22 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="enquiry.html">Enquiries</a></li>
-                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li>
+                        <a href="contact.html"
+                           class="active"
+                           aria-current="page">Contact</a>
+                    </li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container">
+    <main>
 
-        <section class="contact-section">
+        <!-- Contact Introduction and Details -->
+        <section class="hero">
             <h2>Contact Us</h2>
 
             <p>
@@ -53,26 +65,40 @@
                 We would love to hear from you. Complete the form
                 below and provide as much detail as possible.
             </p>
+        </section>
 
-            <div class="contact-details">
-                <h3>Our Contact Details</h3>
+        <section class="contact-info">
+            <h2>Our Contact Details</h2>
 
-                <p><strong>Business:</strong> KrazyCare Drug Store</p>
-                <p><strong>Address:</strong> 123 Luxury Avenue, Johannesburg, South Africa</p>
-                <p><strong>Email:</strong> info@krazycare.co.za</p>
-                <p><strong>Telephone:</strong> 011 000 0000</p>
+            <p><strong>Business:</strong> KrazyCare Drug Store</p>
 
-                <p>
-                    <em>
-                        The contact details above are fictional and
-                        are provided for this academic project.
-                    </em>
-                </p>
-            </div>
+            <p>
+                <strong>Address:</strong>
+                123 Luxury Avenue, Johannesburg, South Africa
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:info@krazycare.co.za">
+                    info@krazycare.co.za
+                </a>
+            </p>
+
+            <p>
+                <strong>Telephone:</strong>
+                <a href="tel:0110000000">011 000 0000</a>
+            </p>
+
+            <p>
+                <em>
+                    The contact details above are fictional and
+                    are provided for this academic project.
+                </em>
+            </p>
         </section>
 
         <!-- Contact Form -->
-        <section class="contact-form-section">
+        <section>
             <h2>Send Us a Message</h2>
 
             <form
@@ -139,11 +165,14 @@
                     ></textarea>
                 </div>
 
-                <button type="submit" class="btn" id="sendMessageButton">
+                <button
+                    type="submit"
+                    class="btn"
+                    id="sendMessageButton"
+                >
                     Send Message
                 </button>
 
-                <!-- AJAX demonstration response -->
                 <div
                     id="contactResponse"
                     role="status"
@@ -156,7 +185,7 @@
         </section>
 
         <!-- Location Map -->
-        <section class="contact-map-section">
+        <section>
             <h2>Find Us</h2>
 
             <p>
@@ -169,9 +198,11 @@
 
             <p>
                 Map data ©
-                <a href="https://www.openstreetmap.org/copyright"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://www.openstreetmap.org/copyright"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     OpenStreetMap contributors
                 </a>
             </p>
@@ -180,13 +211,13 @@
     </main>
 
     <!-- Website Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 KrazyCare Drug Store. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Leaflet map library -->
+    <!-- Leaflet Map Library -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Website JavaScript -->
@@ -194,3 +225,4 @@
 
 </body>
 </html>
+```

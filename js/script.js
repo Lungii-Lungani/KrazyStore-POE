@@ -1,5 +1,3 @@
-alert("KrazyCare JavaScript is working!");
-
 const enquiryForm = document.getElementById("enquiryForm");
 
 if (enquiryForm) {

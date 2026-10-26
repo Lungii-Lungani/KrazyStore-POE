@@ -1,309 +1,196 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Contact KrazyCare Drug Store for healthcare enquiries, product information, and professional pharmacy assistance.">
-
     <title>Contact Us | KrazyCare Drug Store</title>
 
-    <!-- Google Fonts -->
+    <meta name="description"
+          content="Contact KrazyCare Drug Store for product enquiries, services, feedback and general questions.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- KrazyCare CSS -->
+    <meta name="keywords"
+          content="KrazyCare, pharmacy, contact, product enquiries, healthcare">
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Leaflet CSS -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
-    >
+    <!-- Leaflet map styles -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-
+    <!-- Website Header -->
     <header>
-
-        <div class="header-container">
-
-            <a href="index.html" class="logo">
-
-                <img
-                    src="images/Picture 5.png"
-                    alt="KrazyCare Drug Store logo"
-                >
-
-            </a>
+        <div class="container">
+            <h1>KrazyCare Drug Store</h1>
 
             <nav>
-
-                <a href="index.html">Home</a>
-
-                <a href="about.html">About Us</a>
-
-                <a href="products.html">
-                    Products &amp; Services
-                </a>
-
-                <a href="gallery.html">Gallery</a>
-
-                <a href="news.html">
-                    News &amp; Updates
-                </a>
-
-                <a href="enquiry.html">Enquiry</a>
-
-                <a href="contact.html" class="active">
-                    Contact Us
-                </a>
-
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="enquiry.html">Enquiries</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
             </nav>
-
         </div>
-
     </header>
 
-    <main>
+    <!-- Main Content -->
+    <main class="container">
 
-        <!-- HERO -->
-
-        <section class="hero">
-
-            <h1>Contact Us</h1>
-
-            <h3>We Are Here to Assist You</h3>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
 
             <p>
-                Get in touch with KrazyCare Drug Store for healthcare
-                enquiries, product information, and professional
-                pharmacy assistance.
+                Have a question about our products or services?
+                We would love to hear from you. Complete the form
+                below and provide as much detail as possible.
             </p>
 
-        </section>
+            <div class="contact-details">
+                <h3>Our Contact Details</h3>
 
-        <!-- CONTACT INFORMATION -->
-
-        <section>
-
-            <h2>Contact Information</h2>
-
-            <div class="contact-info">
+                <p><strong>Business:</strong> KrazyCare Drug Store</p>
+                <p><strong>Address:</strong> 123 Luxury Avenue, Johannesburg, South Africa</p>
+                <p><strong>Email:</strong> info@krazycare.co.za</p>
+                <p><strong>Telephone:</strong> 011 000 0000</p>
 
                 <p>
-                    <strong>Address:</strong>
-                    123 Luxury Avenue, Johannesburg, South Africa
+                    <em>
+                        The contact details above are fictional and
+                        are provided for this academic project.
+                    </em>
                 </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    +27 11 123 4567
-                </p>
-
-                <p>
-                    <strong>Email:</strong>
-                    info@krazycare.co.za
-                </p>
-
-                <p>
-                    <strong>Business Hours:</strong>
-                </p>
-
-                <ul class="content-list">
-
-                    <li>
-                        Monday - Friday: 08:00 - 18:00
-                    </li>
-
-                    <li>
-                        Saturday: 08:00 - 15:00
-                    </li>
-
-                    <li>
-                        Sunday: Closed
-                    </li>
-
-                </ul>
-
             </div>
-
         </section>
 
-        <!-- INTERACTIVE MAP -->
-
-        <section>
-
-            <h2>Find KrazyCare Drug Store</h2>
-
-            <p>
-                Use the interactive map below to view the
-                representative location of KrazyCare Drug Store
-                in Johannesburg.
-            </p>
-
-            <div id="map"></div>
-
-            <!-- Error message if map cannot load -->
-
-            <p id="mapMessage"></p>
-
-        </section>
-
-        <!-- CONTACT FORM -->
-
-        <section>
-
+        <!-- Contact Form -->
+        <section class="contact-form-section">
             <h2>Send Us a Message</h2>
 
-            <form class="contact-form">
-
-                <!-- NAME FIELD -->
+            <form
+                class="contact-form"
+                id="contactForm"
+                action="#"
+                method="POST"
+            >
 
                 <div class="form-group">
-
-                    <label for="name">
-                        Name:
-                    </label>
+                    <label for="name">Full Name:</label>
 
                     <input
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Enter your name"
+                        autocomplete="name"
                         required
+                        minlength="2"
+                        maxlength="100"
                     >
-
                 </div>
 
-                <!-- EMAIL FIELD -->
-
                 <div class="form-group">
-
-                    <label for="email">
-                        Email:
-                    </label>
+                    <label for="email">Email Address:</label>
 
                     <input
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Enter your email address"
+                        autocomplete="email"
                         required
                     >
-
                 </div>
 
-                <!-- MESSAGE TYPE DROPDOWN -->
-
                 <div class="form-group">
-
-                    <label for="messageType">
-                        Message Type:
-                    </label>
+                    <label for="messageType">Message Type:</label>
 
                     <select
                         id="messageType"
                         name="messageType"
                         required
                     >
-
-                        <option value="">
-                            Select a message type
-                        </option>
-
-                        <option value="Product Enquiry">
-                            Product Enquiry
-                        </option>
-
-                        <option value="Services">
-                            Services
-                        </option>
-
-                        <option value="Feedback">
-                            Feedback
-                        </option>
-
-                        <option value="General Enquiry">
-                            General Enquiry
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
+                        <option value="">Select a message type</option>
+                        <option value="Product Enquiry">Product Enquiry</option>
+                        <option value="Services">Services</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="General Enquiry">General Enquiry</option>
+                        <option value="Other">Other</option>
                     </select>
-
                 </div>
 
-                <!-- MESSAGE FIELD -->
-
                 <div class="form-group">
-
-                    <label for="message">
-                        Message:
-                    </label>
+                    <label for="message">Your Message:</label>
 
                     <textarea
                         id="message"
                         name="message"
-                        rows="5"
-                        placeholder="Enter your message"
+                        rows="6"
                         required
+                        minlength="10"
+                        maxlength="2000"
+                        placeholder="Type your message here..."
                     ></textarea>
-
                 </div>
 
-                <!-- SUBMIT BUTTON -->
-
-                <button type="submit" class="btn">
+                <button type="submit" class="btn" id="sendMessageButton">
                     Send Message
                 </button>
 
-            </form>
+                <!-- AJAX demonstration response -->
+                <div
+                    id="contactResponse"
+                    role="status"
+                    aria-live="polite"
+                    tabindex="-1"
+                    hidden
+                ></div>
 
+            </form>
+        </section>
+
+        <!-- Location Map -->
+        <section class="contact-map-section">
+            <h2>Find Us</h2>
+
+            <p>
+                View our example business location on the interactive map.
+            </p>
+
+            <div id="map" style="height: 350px; width: 100%;"></div>
+
+            <p id="mapMessage" role="status" aria-live="polite"></p>
+
+            <p>
+                Map data ©
+                <a href="https://www.openstreetmap.org/copyright"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    OpenStreetMap contributors
+                </a>
+            </p>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-        <p>
-            &copy; 2026 KrazyCare Drug Store.
-            All rights reserved.
-        </p>
-
+    <!-- Website Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 KrazyCare Drug Store. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- LEAFLET JAVASCRIPT -->
+    <!-- Leaflet map library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js">
-    </script>
-
-    <!-- KRAZYCARE JAVASCRIPT -->
-
+    <!-- Website JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
-
 </html>

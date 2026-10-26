@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,6 @@
 
     <title>Contact Us | KrazyCare Drug Store</title>
 
-
     <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
 
-
     <!-- KrazyCare CSS -->
 
     <link rel="stylesheet" href="css/style.css">
-
 
     <!-- Leaflet CSS -->
 
@@ -39,9 +37,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- HEADER -->
 
@@ -57,7 +53,6 @@
                 >
 
             </a>
-
 
             <nav>
 
@@ -87,10 +82,7 @@
 
     </header>
 
-
-
     <main>
-
 
         <!-- HERO -->
 
@@ -108,14 +100,11 @@
 
         </section>
 
-
-
         <!-- CONTACT INFORMATION -->
 
         <section>
 
             <h2>Contact Information</h2>
-
 
             <div class="contact-info">
 
@@ -124,23 +113,19 @@
                     123 Luxury Avenue, Johannesburg, South Africa
                 </p>
 
-
                 <p>
                     <strong>Phone:</strong>
                     +27 11 123 4567
                 </p>
-
 
                 <p>
                     <strong>Email:</strong>
                     info@krazycare.co.za
                 </p>
 
-
                 <p>
                     <strong>Business Hours:</strong>
                 </p>
-
 
                 <ul class="content-list">
 
@@ -162,8 +147,6 @@
 
         </section>
 
-
-
         <!-- INTERACTIVE MAP -->
 
         <section>
@@ -176,9 +159,7 @@
                 in Johannesburg.
             </p>
 
-
             <div id="map"></div>
-
 
             <!-- Error message if map cannot load -->
 
@@ -186,24 +167,21 @@
 
         </section>
 
-
-
         <!-- CONTACT FORM -->
 
         <section>
 
             <h2>Send Us a Message</h2>
 
-
             <form class="contact-form">
 
+                <!-- NAME FIELD -->
 
                 <div class="form-group">
 
                     <label for="name">
                         Name:
                     </label>
-
 
                     <input
                         type="text"
@@ -215,14 +193,13 @@
 
                 </div>
 
-
+                <!-- EMAIL FIELD -->
 
                 <div class="form-group">
 
                     <label for="email">
                         Email:
                     </label>
-
 
                     <input
                         type="email"
@@ -234,14 +211,55 @@
 
                 </div>
 
+                <!-- MESSAGE TYPE DROPDOWN -->
 
+                <div class="form-group">
+
+                    <label for="messageType">
+                        Message Type:
+                    </label>
+
+                    <select
+                        id="messageType"
+                        name="messageType"
+                        required
+                    >
+
+                        <option value="">
+                            Select a message type
+                        </option>
+
+                        <option value="Product Enquiry">
+                            Product Enquiry
+                        </option>
+
+                        <option value="Services">
+                            Services
+                        </option>
+
+                        <option value="Feedback">
+                            Feedback
+                        </option>
+
+                        <option value="General Enquiry">
+                            General Enquiry
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- MESSAGE FIELD -->
 
                 <div class="form-group">
 
                     <label for="message">
                         Message:
                     </label>
-
 
                     <textarea
                         id="message"
@@ -253,21 +271,17 @@
 
                 </div>
 
-
+                <!-- SUBMIT BUTTON -->
 
                 <button type="submit" class="btn">
                     Send Message
                 </button>
 
-
             </form>
 
         </section>
 
-
     </main>
-
-
 
     <!-- FOOTER -->
 
@@ -280,19 +294,15 @@
 
     </footer>
 
-
-
     <!-- LEAFLET JAVASCRIPT -->
 
     <script
         src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js">
     </script>
 
-
     <!-- KRAZYCARE JAVASCRIPT -->
 
     <script src="js/script.js"></script>
-
 
 </body>
 

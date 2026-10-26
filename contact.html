@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,12 @@
     <meta name="keywords"
           content="KrazyCare, pharmacy, contact, product enquiries, healthcare">
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
           rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Leaflet map styles -->
     <link rel="stylesheet"
@@ -28,26 +28,23 @@
 
 <body>
 
-    <!-- Website Header -->
+    <!-- Website Header: matches the Home page -->
     <header>
         <div class="header-container">
 
-            <h1>KrazyCare Drug Store</h1>
+            <a href="index.html" class="logo">
+                <img src="images/Picture 5.png"
+                     alt="KrazyCare Drug Store logo">
+            </a>
 
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="enquiry.html">Enquiries</a></li>
-                    <li>
-                        <a href="contact.html"
-                           class="active"
-                           aria-current="page">Contact</a>
-                    </li>
-                </ul>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products &amp; Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="news.html">News &amp; Updates</a>
+                <a href="enquiry.html">Enquiry</a>
+                <a href="contact.html" class="active" aria-current="page">Contact Us</a>
             </nav>
 
         </div>
@@ -56,17 +53,21 @@
     <!-- Main Content -->
     <main>
 
-        <!-- Contact Introduction and Details -->
+        <!-- Introduction -->
         <section class="hero">
-            <h2>Contact Us</h2>
+            <h1>Contact Us</h1>
+
+            <h3>We're Here to Help.</h3>
 
             <p>
                 Have a question about our products or services?
-                We would love to hear from you. Complete the form
-                below and provide as much detail as possible.
+                We would love to hear from you. Contact KrazyCare
+                Drug Store or complete the form below, and our team
+                will be ready to assist with your enquiry.
             </p>
         </section>
 
+        <!-- Contact Details: uses the existing stylesheet class -->
         <section class="contact-info">
             <h2>Our Contact Details</h2>
 
@@ -91,8 +92,8 @@
 
             <p>
                 <em>
-                    The contact details above are fictional and
-                    are provided for this academic project.
+                    These contact details are fictional and are
+                    provided for this academic project.
                 </em>
             </p>
         </section>
@@ -101,47 +102,39 @@
         <section>
             <h2>Send Us a Message</h2>
 
-            <form
-                class="contact-form"
-                id="contactForm"
-                action="#"
-                method="POST"
-            >
+            <form class="contact-form"
+                  id="contactForm"
+                  action="#"
+                  method="POST">
 
                 <div class="form-group">
                     <label for="name">Full Name:</label>
-
                     <input
                         type="text"
                         id="name"
                         name="name"
                         autocomplete="name"
-                        required
                         minlength="2"
                         maxlength="100"
-                    >
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-
                     <input
                         type="email"
                         id="email"
                         name="email"
                         autocomplete="email"
-                        required
-                    >
+                        required>
                 </div>
 
                 <div class="form-group">
                     <label for="messageType">Message Type:</label>
 
-                    <select
-                        id="messageType"
-                        name="messageType"
-                        required
-                    >
+                    <select id="messageType"
+                            name="messageType"
+                            required>
                         <option value="">Select a message type</option>
                         <option value="Product Enquiry">Product Enquiry</option>
                         <option value="Services">Services</option>
@@ -158,28 +151,24 @@
                         id="message"
                         name="message"
                         rows="6"
-                        required
                         minlength="10"
                         maxlength="2000"
                         placeholder="Type your message here..."
-                    ></textarea>
+                        required></textarea>
                 </div>
 
-                <button
-                    type="submit"
-                    class="btn"
-                    id="sendMessageButton"
-                >
+                <button type="submit"
+                        class="btn"
+                        id="sendMessageButton">
                     Send Message
                 </button>
 
-                <div
-                    id="contactResponse"
-                    role="status"
-                    aria-live="polite"
-                    tabindex="-1"
-                    hidden
-                ></div>
+                <!-- Response used by the existing JavaScript -->
+                <div id="contactResponse"
+                     role="status"
+                     aria-live="polite"
+                     tabindex="-1"
+                     hidden></div>
 
             </form>
         </section>
@@ -194,15 +183,15 @@
 
             <div id="map" style="height: 350px; width: 100%;"></div>
 
-            <p id="mapMessage" role="status" aria-live="polite"></p>
+            <p id="mapMessage"
+               role="status"
+               aria-live="polite"></p>
 
             <p>
                 Map data ©
-                <a
-                    href="https://www.openstreetmap.org/copyright"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://www.openstreetmap.org/copyright"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     OpenStreetMap contributors
                 </a>
             </p>
@@ -210,11 +199,11 @@
 
     </main>
 
-    <!-- Website Footer -->
+    <!-- Website Footer: matches the Home page -->
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 KrazyCare Drug Store. All rights reserved.</p>
-        </div>
+        <p>
+            &copy; 2026 KrazyCare Drug Store | All Rights Reserved.
+        </p>
     </footer>
 
     <!-- Leaflet Map Library -->
